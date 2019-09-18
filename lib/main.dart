@@ -38,14 +38,8 @@ void main() async {
       (userInfoString != null && userInfoString.length != 0)
           ? UserInfo.fromJson(jsonDecode(userInfoString))
           : null);
-  var path = await getDatabasesPath();
-
-  for (var item in Directory(path).listSync()) {
-    if (item.path.contains("bili_down")) {
-      await item.delete();
-    }
-  }
-  var db = await openDatabase("bili_down.db", version: 1,
+  var databasesPath = await getDatabasesPath();
+  var db = await openDatabase(databasesPath+"/bili_down.db", version: 1,
       onCreate: (Database _db, int version) async {
     await _db.execute('''
 create table $tableFavorite ( 

@@ -2,14 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bilidown/app/api.dart';
 import 'package:flutter_bilidown/app/app_settings.dart';
 import 'package:flutter_bilidown/app/app_user_info.dart';
 import 'package:flutter_bilidown/app/utils.dart';
-import 'package:flutter_bilidown/models/entry_json_video.dart';
-import 'package:flutter_bilidown/models/userinfo.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
